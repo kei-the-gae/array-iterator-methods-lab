@@ -59,7 +59,7 @@ let veryOldInventors = []
 
 // Enter your solution code here:
 
-inventors.filter((inventor) => { if (inventor.year >= 1500 && inventor.year < 1600) veryOldInventors.push(inventor) });
+veryOldInventors = inventors.filter((inventor) => { if (inventor.year >= 1500 && inventor.year < 1600) return inventor });
 
 // Check your return value:
 console.log('Exercise 1 My Result: ', veryOldInventors)
@@ -84,7 +84,7 @@ let inventorNames = []
 
 // Enter your solution code here:
 
-inventors.map((inventor) => { inventorNames.push({ first: inventor.first, last: inventor.last }) });
+inventorNames = inventors.map((inventor) => { return { first: inventor.first, last: inventor.last } });
 
 // Check your return value:
 console.log('Exercise 2 My Result: ', inventorNames)
