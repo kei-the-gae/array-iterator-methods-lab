@@ -311,3 +311,32 @@ totalYearsLived = inventors.reduce((accumulator, inventor) => { return accumulat
 // Check your return value:
 console.log('Bonus 1 My Result: ', totalYearsLived)
 console.log('Bonus 1 Correct Result: ', 861)
+
+// Array.prototype.reduce()
+
+// Bonus 2. Tallying Travel Methods Using Array.prototype.reduce(). Count the number of times each travel method appears in the 'travelMethods' array.
+
+// - The resulting object should have keys as the travel methods ('car', 'truck', 'bike', etc.) and values as their respective counts.
+// - Store this object in the variable 'travelMethodCounts'.
+
+// Hints:
+// - Inside the reduce function, check if the travel method already exists as a key in your accumulator object. If it does, increment its count. If not, add it with a count of 1.
+// - Since you want to return an object, be sure to pass an empty {} for the initial value of the "accumulator".
+
+
+let travelMethodCounts = {}
+
+// Enter your solution code here:
+
+travelMethodCounts = travelMethods.reduce((accumulator, travelMethod) => {
+    if (accumulator[travelMethod]) {
+        accumulator[travelMethod] = accumulator[travelMethod] + 1;
+    } else {
+        accumulator[travelMethod] = 1;
+    };
+    return accumulator;
+}, {});
+
+// Check your return value:
+console.log('Bonus 2 My Result: ', travelMethodCounts)
+console.log('Bonus 2 Correct Result: ', { car: 5, truck: 3, bike: 2, walk: 2, van: 2 })
