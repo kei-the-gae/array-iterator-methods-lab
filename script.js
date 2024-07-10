@@ -272,3 +272,19 @@ commentById = comments.find((comment) => { if (comment.id === 823423) return com
 // Check your return value:
 console.log('Exercise 8 My Result: ', commentById)
 console.log('Exercise 8 Correct Result: ', { text: 'Super good', id: 823423 })
+
+// Array.prototype.findIndex()
+
+// 9. Determine the index of the comment that has a specific ID 123523 in an array of comment objects.
+
+// - Store the index in the variable 'idx'.
+
+let idx = null
+
+// Enter your solution code here:
+
+idx = comments.findIndex((comment) => { if (comment.id === 123523) return comment });
+
+// Check your return value:
+console.log('Exercise 9 My Result: ', idx)
+console.log('Exercise 9 Correct Result: ', 3)
